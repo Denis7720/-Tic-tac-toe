@@ -18,5 +18,11 @@ build/matrix.o: src/matrix.c
 build/players.o: src/players.c
 		gcc -Wall -w -o build/players.o -c src/players.c
 
+bin/test: build/test.o build/players.o
+		gcc -Wall -w -o bin/test build/test.o build/players.o
+
+builf/test.o: test/test.c
+		gcc -Wall -w -o build/test.o -c test/test.c -Ithirdparty -Isrc
+
 clean:
 		rm -rf *.o
