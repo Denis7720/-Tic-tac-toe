@@ -24,5 +24,11 @@ bin/test: build/test.o build/players.o
 builf/test.o: test/test.c
 		gcc -Wall -w -o build/test.o -c test/test.c -Ithirdparty -Isrc
 
+bin:
+		mkdir -p bin
+
+build:
+		mkdir -p build
+
 clean:
 		rm -rf *.o
